@@ -1,14 +1,23 @@
-// let a = Number(document.querySelector("#first-number").value);
-// let b = Number(document.querySelector("#second-number").value);
-// let c = Number(document.querySelector("#third-number").value);
+var sayi1=document.querySelector("#first-number");
+var sayi2=document.querySelector("#second-number");
+var sayi3=document.querySelector("#third-number");
 
-let a = window.prompt('#first-number');
-let b = window.prompt('#second-number');
-let c = window.prompt('#third-number');
+// let a = window.prompt('#first-number');
+// let b = window.prompt('#second-number');
+// let c = window.prompt('#third-number');
 
 let button = document.querySelector("#btn");
 
 button.addEventListener("click", function(){
+    var a =Number(sayi1.value); 
+    var b =Number(sayi2.value);
+    var c =Number(sayi3.value);
+
+    if(a==b || a==c || b==c){ 
+        alert("Lutfen esit olmayan sayi giriniz");
+        console.log("Lutfen esit olmayan sayi giriniz");
+    } 
+
     if(a > b && a > c){
         if(b > c){
             document.getElementById("order").innerHTML = ( a + ">" + b + ">" + c );
