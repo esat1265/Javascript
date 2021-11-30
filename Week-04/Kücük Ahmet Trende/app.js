@@ -11,9 +11,9 @@ tahmin.onclick= function() {
     
 
     sayac++;
-    if (rnumber!=kacinciTren.value && sayac >= hak) {
+    if (rnumber!=kacinciTren.value && sayac == hak) {
         document.getElementById("sonuc").innerHTML = "Uzgunum Ahmeti bulamadiniz!"; 
-        document.getElementById("puan").innerHTML = "0"; 
+        document.getElementById("puan").innerHTML = "<h2>"+"0"+"</h2>"; 
     } 
     if (rnumber > kacinciTren.value) {
         window.alert("sonraki vagonlara bakiniz!") ;
@@ -24,7 +24,7 @@ tahmin.onclick= function() {
     if (rnumber == kacinciTren.value){
         document.getElementById("sonuc").innerHTML = "Tebrikler Ahmet'i buldunuz!";
         puan = puan - ((sayac-1)*25);
-        document.getElementById("puan").innerHTML = puan;
+        document.getElementById("puan").innerHTML ="<h2>"+ puan + "</h2>";
     } 
 }
     
